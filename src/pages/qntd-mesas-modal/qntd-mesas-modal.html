@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title >Cadastrar Mesas</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="backToHome()">
+          <ion-icon  name="arrow-back" ></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+        <ion-label>Data de Cadastro: {{_data | date:'dd/MM/yyyy'}}</ion-label>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label >Quantidade de Mesas</ion-label>
+       <ion-select value="" [(ngModel)]="qtd" okText="Ok" cancelText="Voltar" >
+          <ion-option *ngFor="let i of items" >{{i}}</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  <br>
+  <button ion-button  full color="secondary" (click)="confirmaQtd()">Confirmar</button>
+
+</ion-content>

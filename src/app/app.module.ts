@@ -7,6 +7,8 @@ import { IonicStorageModule } from '@ionic/storage';
 
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
+import { QntdMesasModalPage } from '../pages/qntd-mesas-modal/qntd-mesas-modal';
+import { MesasPage } from '../pages/mesas/mesas';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -15,6 +17,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   declarations: [
     MyApp,
     HomePage,
+    QntdMesasModalPage,
+    MesasPage,
     TabsPage
   ],
   imports: [
@@ -26,6 +30,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   entryComponents: [
     MyApp,
     HomePage,
+    QntdMesasModalPage,
+    MesasPage,
     TabsPage
   ],
   providers: [

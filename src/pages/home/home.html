@@ -1,10 +1,12 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="primary">
     <ion-title>Controle de Mesas</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  
-  
+<ion-content padding >
+  <br>
+  <button ion-button color="secondary" full (click)="modalCadastraQtd()">Iniciar Mesas</button>
+  <br>
+  <button ion-button color="primary" full (click)="visualizar()" disabled> Detalhar Mesas</button>
 </ion-content>

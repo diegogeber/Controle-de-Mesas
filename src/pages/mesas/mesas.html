@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Mesas</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="backToHome()">
+          <ion-icon  name="arrow-back" ></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content >
+  <ion-list inset>
+    <ion-item>
+      <ion-grid>
+        <ion-row  >  
+          <ion-col col-4 ><strong>MESAS</strong> </ion-col>
+          <ion-col col-6  ><strong>STATUS</strong></ion-col>
+          <ion-col col-2 ><strong>AÇÕES</strong></ion-col>
+        </ion-row>
+      </ion-grid>    
+    </ion-item> 
+    <ion-item  *ngFor="let mesa of listaMesas" >
+      <ion-grid>
+        <ion-row>  
+          <ion-col col-4 >{{mesa.descricaoMesa}}</ion-col>
+          <ion-col col-6  >{{mesa.getStatus()}}</ion-col>
+          <ion-col col-2 ><ion-icon name="reorder" (click)="itemSelected(item)"></ion-icon></ion-col>
+        </ion-row>
+      </ion-grid>    
+    </ion-item>  
+  </ion-list>'
+</ion-content>
