@@ -3,12 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { IonicStorageModule } from '@ionic/storage';
+import {Ionic2MaskDirective} from "ionic2-mask-directive";
 
 
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { QntdMesasModalPage } from '../pages/qntd-mesas-modal/qntd-mesas-modal';
 import { MesasPage } from '../pages/mesas/mesas';
+import { AcaoModalPage } from '../pages/acao-modal/acao-modal';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -19,7 +21,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     QntdMesasModalPage,
     MesasPage,
-    TabsPage
+    AcaoModalPage,
+    TabsPage,
+    Ionic2MaskDirective
   ],
   imports: [
     BrowserModule,
@@ -32,6 +36,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     QntdMesasModalPage,
     MesasPage,
+    AcaoModalPage,
     TabsPage
   ],
   providers: [

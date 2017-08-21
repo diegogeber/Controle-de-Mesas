@@ -25,9 +25,9 @@
         <ion-row>  
           <ion-col col-4 >{{mesa.descricaoMesa}}</ion-col>
           <ion-col col-6  >{{mesa.getStatus()}}</ion-col>
-          <ion-col col-2 ><ion-icon name="reorder" (click)="itemSelected(item)"></ion-icon></ion-col>
+          <ion-col col-2 ><ion-icon name="reorder" (click)="itemSelected(mesa)"></ion-icon></ion-col>
         </ion-row>
       </ion-grid>    
     </ion-item>  
-  </ion-list>'
+  </ion-list>
 </ion-content>

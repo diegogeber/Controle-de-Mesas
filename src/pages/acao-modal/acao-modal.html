@@ -1,0 +1,39 @@
+
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Detalhes - {{this.mesaRecebida.descricaoMesa}} </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-item>
+    <ion-label>Em uso:</ion-label>
+    <ion-toggle [(ngModel)]="this.mesaRecebida.status" ></ion-toggle>
+  </ion-item>
+  <br>
+  <ion-title>Pedidos</ion-title>  
+    <ion-item>
+            <ion-label color="primary" stacked>Item:</ion-label>
+            <ion-input type="string" [readonly]=isReadOnly() placeholder="Item"></ion-input>
+           
+    </ion-item>
+    <ion-item >
+        <ion-label color="primary" stacked>Valor:</ion-label>
+        
+        <ion-input type="text"  placeholder="Preço do Item" [(ngModel)]="this.mesaRecebida.valorIten" [readonly]=isReadOnly()></ion-input><br>
+        
+                
+    </ion-item>  
+    
+       <button ion-button full class="button" [disabled]="isReadOnly()">Adiciona Item</button><br>
+      
+        <ion-title>Subtotal</ion-title> 
+    <ion-item >    
+      <ion-input type="number" [readonly]=true ></ion-input>
+    </ion-item> 
+    <br>
+    <button ion-button full class="button" color="danger" [disabled]="isReadOnly()" (click)="alertaEncerrar()">Fechar Mesa</button><br>   
+</ion-content>

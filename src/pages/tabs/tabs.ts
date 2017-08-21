@@ -9,6 +9,7 @@ import { MesasPage } from '../mesas/mesas';
 export class TabsPage {
 
   tab1Root = HomePage;
+  tab2Root = MesasPage;
  
  
   constructor() {

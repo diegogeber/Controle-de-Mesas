@@ -1,6 +1,6 @@
 {
   "name": "Controle-de-Mesas",
-  "app_id": "",
+  "app_id": "3951cd24",
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}
