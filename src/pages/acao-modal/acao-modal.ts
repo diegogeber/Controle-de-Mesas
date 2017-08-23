@@ -11,6 +11,8 @@ import { Mesa } from "../../app/model/mesa";
 export class AcaoModalPage {
   mesaRecebida:Mesa;
   mesaFechada:boolean = false;
+  total:number;
+ 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
               public viewCtrl: ViewController,
@@ -36,8 +38,23 @@ export class AcaoModalPage {
     }
   }
 
-  alertaEncerrar(){
+  encerrar(){
+    this.mesaRecebida.encerrarMesa= true;
+    this.mesaRecebida.status=false;
+    this.mesaFechada=true;
+    this.mesaRecebida.valorTotal=0.00;
+    this.navCtrl.pop();
+  }
+
+  adicionaItem(){
     
+    if(this.mesaRecebida.valorIten != null){
+      this.total = parseFloat(this.mesaRecebida.valorTotal.toString()) + parseFloat(this.mesaRecebida.valorIten.toString());  
+      this.mesaRecebida.valorTotal = this.total;
+      this.mesaRecebida.valorIten = null;
+    }else{
+        
+    }
   }
 
   

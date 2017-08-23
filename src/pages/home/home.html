@@ -6,7 +6,6 @@
 
 <ion-content padding >
   <br>
-  <button ion-button color="secondary" full (click)="modalCadastraQtd()">Iniciar Mesas</button>
-  <br>
-  <button ion-button color="primary" full (click)="visualizar()" disabled> Detalhar Mesas</button>
+  <button ion-button color="secondary" full (click)="modalCadastraQtd()" [disabled]="isDisabled()">Iniciar Mesas</button>
+  
 </ion-content>

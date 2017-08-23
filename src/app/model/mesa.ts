@@ -12,6 +12,9 @@ export class Mesa{
         this.descricaoMesa = "Mesa " + this.numeroMesa;
         this.status = false;
         this.dataCriacao= new Date();
+        this.idMesa = numeroMesa;
+        this.valorTotal = 0.00;
+        this.valorIten = 0.00 ;
         console.log("Mesa Criada:" + this.idMesa + " " + this.dataCriacao + " " + this.descricaoMesa );
     }
         

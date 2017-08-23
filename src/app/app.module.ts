@@ -5,17 +5,14 @@ import { MyApp } from './app.component';
 import { IonicStorageModule } from '@ionic/storage';
 import {Ionic2MaskDirective} from "ionic2-mask-directive";
 import { SQLite } from '@ionic-native/sqlite'
-
-import { DatabaseService } from '../util/database-service';
-
+import { HttpModule } from '@angular/http';
 import { HomePage } from '../pages/home/home';
-import { TabsPage } from '../pages/tabs/tabs';
 import { QntdMesasModalPage } from '../pages/qntd-mesas-modal/qntd-mesas-modal';
 import { MesasPage } from '../pages/mesas/mesas';
 import { AcaoModalPage } from '../pages/acao-modal/acao-modal';
-
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { ConfigDataProvider } from '../providers/config-data/config-data';
 
 @NgModule({
   declarations: [
@@ -24,11 +21,11 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     QntdMesasModalPage,
     MesasPage,
     AcaoModalPage,
-    TabsPage,
-    Ionic2MaskDirective
+    Ionic2MaskDirective,
   ],
   imports: [
     BrowserModule,
+    HttpModule,    
     IonicModule.forRoot(MyApp),
     IonicStorageModule.forRoot()
   ],
@@ -39,14 +36,13 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     QntdMesasModalPage,
     MesasPage,
     AcaoModalPage,
-    TabsPage
-  ],
+    ],
   providers: [
     StatusBar,
     SplashScreen,
     SQLite,
-    DatabaseService,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    ConfigDataProvider
   ]
 })
 export class AppModule {}

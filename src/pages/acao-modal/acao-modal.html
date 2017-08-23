@@ -17,23 +17,23 @@
   <ion-title>Pedidos</ion-title>  
     <ion-item>
             <ion-label color="primary" stacked>Item:</ion-label>
-            <ion-input type="string" [readonly]=isReadOnly() placeholder="Item"></ion-input>
+            <ion-input type="string" [readonly]=isReadOnly() placeholder="Item (opcional)"></ion-input>
            
     </ion-item>
     <ion-item >
         <ion-label color="primary" stacked>Valor:</ion-label>
         
-        <ion-input type="text"  placeholder="Preço do Item" [(ngModel)]="this.mesaRecebida.valorIten" [readonly]=isReadOnly()></ion-input><br>
+        <ion-input type="number"  placeholder="Preço do Item" [(ngModel)]="this.mesaRecebida.valorIten" [readonly]=isReadOnly()></ion-input><br>
         
                 
     </ion-item>  
     
-       <button ion-button full class="button" [disabled]="isReadOnly()">Adiciona Item</button><br>
+       <button ion-button full class="button" [disabled]="isReadOnly()" (click)="adicionaItem()">Adiciona Item</button><br>
       
         <ion-title>Subtotal</ion-title> 
     <ion-item >    
-      <ion-input type="number" [readonly]=true ></ion-input>
+      <ion-input type="number" [readonly]=true [value]="this.mesaRecebida.valorTotal" ></ion-input>
     </ion-item> 
     <br>
-    <button ion-button full class="button" color="danger" [disabled]="isReadOnly()" (click)="alertaEncerrar()">Fechar Mesa</button><br>   
+    <button ion-button full class="button" color="danger" [disabled]="isReadOnly()" (click)="encerrar()">Encerrar Mesa - Desocupar</button><br>   
 </ion-content>
