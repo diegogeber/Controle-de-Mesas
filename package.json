@@ -27,7 +27,6 @@
         "@ionic/app-scripts": "^2.1.4",
         "@ionic/storage": "^2.0.1",
         "cordova-android": "^6.2.3",
-        "cordova-ios": "^4.4.0",
         "cordova-plugin-device": "^1.1.4",
         "cordova-plugin-splashscreen": "^4.0.3",
         "cordova-plugin-statusbar": "^2.2.2",
@@ -58,8 +57,7 @@
             "ionic-plugin-keyboard": {}
         },
         "platforms": [
-            "android",
-            "ios"
+            "android"
         ]
     }
 }
